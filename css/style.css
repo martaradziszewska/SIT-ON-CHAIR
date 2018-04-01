@@ -1,0 +1,616 @@
+/*USING FONTS*/
+
+@import url("typography.css");
+
+/*reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+}
+
+.main-width {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 78px 0 68px;
+    /*border: solid 1px red;*/
+    min-height: 1px;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #000;
+    min-height: 40px;
+    color: white;
+    letter-spacing: 1px;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+li {
+
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: #24B89E;
+}
+
+header nav {
+    float: right;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.more-info {
+    position: relative;
+}
+
+header p {
+    cursor: pointer;
+    float: left;
+
+}
+
+header p:hover {}
+
+header p span {
+    /*position: relative;*/
+    display: inline-block;
+    font-weight: 900;
+    color: #24B89E;
+}
+
+header p:hover span {
+    animation: jump 1s linear;
+
+}
+
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-3px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-8px) rotate(-10deg);
+    }
+    80% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.nav-content {
+    display: none;
+    text-transform: none;
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+}
+
+.nav-content li {
+    padding-top: 10px;
+    margin-left: 15px;
+}
+
+.arrow-up {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+}
+
+.more-info:hover .nav-content {
+    display: block;
+}
+
+/*style for section with slider*/
+
+.slider {
+
+    background: rgba(250, 250, 250, 1);
+    background: -moz-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(242, 242, 242, 1) 61%, rgba(206, 205, 213, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250, 250, 250, 1)), color-stop(61%, rgba(242, 242, 242, 1)), color-stop(100%, rgba(206, 205, 213, 1)));
+    background: -webkit-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(242, 242, 242, 1) 61%, rgba(206, 205, 213, 1) 100%);
+    background: -o-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(242, 242, 242, 1) 61%, rgba(206, 205, 213, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(242, 242, 242, 1) 61%, rgba(206, 205, 213, 1) 100%);
+    background: linear-gradient(to bottom, rgba(250, 250, 250, 1) 0%, rgba(242, 242, 242, 1) 61%, rgba(206, 205, 213, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#cecdd5', GradientType=0);
+    /*padding: 10px 0 10px 0;*/
+}
+
+.slider .row {
+    position: relative;
+}
+
+.slider .medium-box {
+    text-align: center;
+    width: 38%;
+    float: left;
+    margin-left: 5%;
+}
+
+.slider .arrow {
+    color: #2BC3AC;
+    width: 12%;
+    font-size: 75px;
+    cursor: pointer;
+    /*transform: scale(4,4);*/
+}
+
+.on-left {
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.on-right {
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translateY(-50%);
+
+}
+
+.slider-text {
+    margin-top: 130px;
+}
+
+.slider-text p {
+    line-height: 22px;
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.img {
+
+    background: url("../images/black_chair.png") no-repeat center;
+    min-height: 430px;
+    background-size: cover;
+    margin-top: 60px;
+}
+
+.slider .medium-box h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.slider .medium-box span {
+    color: #24B89E;
+    font-weight: 800;
+}
+
+
+.medium-box button {
+    font-size: 24px;
+    text-transform: uppercase;
+    height: 50px;
+    width: 260px;
+    background-color: #24B89E;
+    border: none;
+    border-radius: 10px;
+}
+
+.medium-box button a {
+    color: white;
+}
+
+/*style for first section - services*/
+
+.services {
+    height: 330px;
+    text-align: left;
+    font-size: 13px;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.small-box {
+    margin: 35px 0 35px 0;
+    width: 31.6%;
+    height: 225px;
+    float: left;
+    border: solid 1px #D9D9D9;
+
+}
+
+.left {
+    background: url("../images/box1_img.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+.center {
+    background: url("../images/box2_img.jpg") no-repeat center;
+    background-size: cover;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.right {
+    height: 250px;
+    padding: 20px 20px;
+
+}
+
+.right p {
+    font-size: 13px;
+    color: #727272;
+    padding-top: 15px;
+    line-height: 20px;
+}
+
+.small-header {
+    height: 62px;
+    background-color: rgba(255, 255, 255, .4);
+    margin-top: 150px;
+    position: relative;
+}
+
+.services h3 {
+    border-bottom: solid 6px #2BC3AC;
+}
+
+.small-header h3 {
+    margin-left: 15px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.small-header h3 span {
+    text-transform: uppercase;
+}
+
+
+/*style for second section - price offer*/
+
+.price-offer .main-width {
+    background-color: #F1F1F1;
+    margin-top: 30px;
+
+}
+
+.price-offer {
+    text-transform: uppercase;
+    color: #595959;
+    font-size: 22px;
+    /*padding: 10px 0;*/
+}
+
+.price-offer .row > p {
+    padding-top: 40px;
+}
+
+.price-offer .border-bottom {
+    margin-top: 5px;
+    height: 8px;
+    background-color: #27C5AA;
+    width: 320px;
+}
+
+.card-offer {
+    color: #2BC3AC;
+    font-weight: 500;
+    padding-top: 30px;
+    text-align: center;
+    margin: 75px 0 65px 0;
+    border: solid 2px #D7D7D7;
+    border-radius: 2px;
+    width: 31.6%;
+    height: 505px;
+    float: left;
+    background-color: #F9F9F9;
+    position: relative;
+}
+
+.outer-circle {
+    background-color: #FFFFFF;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid 2px #D7D7D7;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+.inner-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #C1C1C1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-price {
+    background-color: #fff;
+    border: solid 2px #D7D7D7;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 25px;
+}
+
+.circle-price p,
+sup {
+    text-align: center;
+    font-size: 16px;
+}
+
+.circle-price .big-price {
+    font-weight: 800;
+    margin-top: 25px;
+    font-size: 42px;
+}
+
+.middle {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #27C5AA;
+    border: solid 2px #27C5AA;
+}
+
+.middle .outer-circle {
+    background-color: #27C5AA;
+    border: none;
+}
+
+.middle .inner-circle {
+    background-color: #F9F9F9;
+}
+
+.middle > p {
+    color: white;
+}
+
+/*style fot the join button */
+
+.list-service {
+    text-transform: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.list-service p {
+    color: #7b7b7b;
+    font-size: 24px;
+    padding: 7px 0;
+}
+
+.list-service p:nth-child(2n) {
+    background-color: #F0F0F0;
+}
+
+.list-service p:nth-child(2n-1) {
+    background-color: #e3e3e3;
+}
+
+.middle .list-service p:nth-child(2n-1) {
+    background-color: #fff;
+}
+
+.card-offer button {
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4%;
+    width: 120px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #27C5AA;
+}
+
+.middle button {
+    background-color: #fff;
+    color: #27C5AA
+}
+
+/*style for footer*/
+
+.form-box .row > p {
+    text-transform: uppercase;
+    padding-top: 30px;
+    font-size: 22px;
+}
+
+
+.form-box .border-bottom {
+    height: 8px;
+    margin: 10px 0 20px 0;
+    background-color: #27C5AA;
+    width: 320px;
+}
+
+.footer-box {
+    /*width: 50%;*/
+    float: left;
+    padding-bottom: 30px;
+}
+
+.form {
+    width: 61%
+}
+
+
+form input,
+textarea {
+    border: solid 1px #2BC3AC;
+    margin-top: 25px;
+    resize: none;
+    width: 100%;
+    height: 70px;
+}
+
+.footer-box form textarea {
+    height: 190px;
+}
+
+form input,
+textarea[placeholder] {
+    font-size: 32px;
+    padding: 0 15px;
+}
+
+form textarea[placeholder] {
+    padding-top: 15px;
+}
+
+
+.checkbox {
+    width: 39%;
+    text-align: center;
+    position: relative;
+}
+
+.center-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-checkButton {
+    font-size: 19px;
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 52px;
+    padding-right: 15px;
+    margin-top: 245px;
+
+}
+
+.center-checkButton label {
+    float: left;
+}
+
+.center-checkButton input {
+    margin-right: 10px;
+    width: 52px;
+    height: 50px;
+}
+
+
+
+.center-checkButton button {
+    width: 100%;
+    text-transform: uppercase;
+    height: 70px;
+    border: none;
+    color: white;
+    font-size: 32px;
+    border-radius: 10px;
+    font-weight: 900;
+    background: #2BC3AC;
+    margin-top: 36px;
+}
+
+
+
+/*styles for last section /footer*/
+
+footer {
+    color: #7b7b7b;
+}
+
+.box {
+
+    height: 120px;
+    float: left;
+    letter-spacing: 1px;
+    /*margin-top: 60px;*/
+}
+
+.copyright {
+    width: 66%;
+}
+
+.icon,
+.logo {
+    width: 17%;
+}
+
+.icon {
+    margin-top: 38px;
+}
+
+.logo p {
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    font-weight: 900;
+}
+
+.copyright,
+.logo {
+    margin-top: 50px;
+}
